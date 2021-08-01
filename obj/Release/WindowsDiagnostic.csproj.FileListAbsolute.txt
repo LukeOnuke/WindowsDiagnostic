@@ -1,0 +1,10 @@
+C:\Users\lukak\Documents\GitHub\WindowsDiagnostic\bin\Release\WindowsDiagnostic.exe.config
+C:\Users\lukak\Documents\GitHub\WindowsDiagnostic\bin\Release\WindowsDiagnostic.exe
+C:\Users\lukak\Documents\GitHub\WindowsDiagnostic\bin\Release\WindowsDiagnostic.pdb
+C:\Users\lukak\Documents\GitHub\WindowsDiagnostic\obj\Release\WindowsDiagnostic.csproj.AssemblyReference.cache
+C:\Users\lukak\Documents\GitHub\WindowsDiagnostic\obj\Release\WindowsDiagnostic.window.resources
+C:\Users\lukak\Documents\GitHub\WindowsDiagnostic\obj\Release\WindowsDiagnostic.Properties.Resources.resources
+C:\Users\lukak\Documents\GitHub\WindowsDiagnostic\obj\Release\WindowsDiagnostic.csproj.GenerateResource.cache
+C:\Users\lukak\Documents\GitHub\WindowsDiagnostic\obj\Release\WindowsDiagnostic.csproj.CoreCompileInputs.cache
+C:\Users\lukak\Documents\GitHub\WindowsDiagnostic\obj\Release\WindowsDiagnostic.exe
+C:\Users\lukak\Documents\GitHub\WindowsDiagnostic\obj\Release\WindowsDiagnostic.pdb

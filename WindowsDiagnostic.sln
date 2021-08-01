@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsDiagnostic", "WindowsDiagnostic.csproj", "{68FCE49A-E959-47FE-96BC-97CAFB085607}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68FCE49A-E959-47FE-96BC-97CAFB085607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68FCE49A-E959-47FE-96BC-97CAFB085607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68FCE49A-E959-47FE-96BC-97CAFB085607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68FCE49A-E959-47FE-96BC-97CAFB085607}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9B9A894D-1DF1-45DD-8B4D-B32360B598FD}
+	EndGlobalSection
+EndGlobal
