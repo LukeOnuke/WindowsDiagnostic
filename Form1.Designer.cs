@@ -35,6 +35,8 @@ namespace WindowsDiagnostic
             this.toolStripProgressBar = new System.Windows.Forms.ToolStripProgressBar();
             this.startButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.settingsCheckComponents = new System.Windows.Forms.CheckBox();
+            this.settingsDumpDb = new System.Windows.Forms.CheckBox();
             this.eventsListBox = new System.Windows.Forms.ListView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -43,8 +45,13 @@ namespace WindowsDiagnostic
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.gpuInfo = new System.Windows.Forms.Label();
+            this.ramInfo = new System.Windows.Forms.Label();
+            this.osName = new System.Windows.Forms.Label();
             this.motherboardInfo = new System.Windows.Forms.Label();
             this.cpuLabel = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.errorsFlexBox = new System.Windows.Forms.FlowLayoutPanel();
             this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -53,6 +60,7 @@ namespace WindowsDiagnostic
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -92,6 +100,8 @@ namespace WindowsDiagnostic
             // groupBox1
             // 
             this.groupBox1.AutoSize = true;
+            this.groupBox1.Controls.Add(this.settingsCheckComponents);
+            this.groupBox1.Controls.Add(this.settingsDumpDb);
             this.groupBox1.Controls.Add(this.startButton);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -103,6 +113,28 @@ namespace WindowsDiagnostic
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Diagnosis controls";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // settingsCheckComponents
+            // 
+            this.settingsCheckComponents.AutoSize = true;
+            this.settingsCheckComponents.Location = new System.Drawing.Point(283, 31);
+            this.settingsCheckComponents.Name = "settingsCheckComponents";
+            this.settingsCheckComponents.Size = new System.Drawing.Size(197, 17);
+            this.settingsCheckComponents.TabIndex = 3;
+            this.settingsCheckComponents.Text = "Check system components for errors";
+            this.settingsCheckComponents.UseVisualStyleBackColor = true;
+            // 
+            // settingsDumpDb
+            // 
+            this.settingsDumpDb.AutoSize = true;
+            this.settingsDumpDb.Checked = true;
+            this.settingsDumpDb.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.settingsDumpDb.Location = new System.Drawing.Point(115, 30);
+            this.settingsDumpDb.Name = "settingsDumpDb";
+            this.settingsDumpDb.Size = new System.Drawing.Size(161, 17);
+            this.settingsDumpDb.TabIndex = 2;
+            this.settingsDumpDb.Text = "Fetch WIN32 database data";
+            this.settingsDumpDb.UseVisualStyleBackColor = true;
             // 
             // eventsListBox
             // 
@@ -170,6 +202,7 @@ namespace WindowsDiagnostic
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(0, 73);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -200,6 +233,9 @@ namespace WindowsDiagnostic
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.gpuInfo);
+            this.tabPage3.Controls.Add(this.ramInfo);
+            this.tabPage3.Controls.Add(this.osName);
             this.tabPage3.Controls.Add(this.motherboardInfo);
             this.tabPage3.Controls.Add(this.cpuLabel);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
@@ -210,10 +246,39 @@ namespace WindowsDiagnostic
             this.tabPage3.Text = "Computer info";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // gpuInfo
+            // 
+            this.gpuInfo.AutoSize = true;
+            this.gpuInfo.Location = new System.Drawing.Point(11, 105);
+            this.gpuInfo.Name = "gpuInfo";
+            this.gpuInfo.Size = new System.Drawing.Size(104, 13);
+            this.gpuInfo.TabIndex = 4;
+            this.gpuInfo.Text = "GRAPHICS CARD - ";
+            // 
+            // ramInfo
+            // 
+            this.ramInfo.AutoSize = true;
+            this.ramInfo.Location = new System.Drawing.Point(11, 83);
+            this.ramInfo.Name = "ramInfo";
+            this.ramInfo.Size = new System.Drawing.Size(40, 13);
+            this.ramInfo.TabIndex = 3;
+            this.ramInfo.Text = "RAM - ";
+            // 
+            // osName
+            // 
+            this.osName.AutoSize = true;
+            this.osName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.osName.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.osName.Location = new System.Drawing.Point(9, 3);
+            this.osName.Name = "osName";
+            this.osName.Size = new System.Drawing.Size(290, 26);
+            this.osName.TabIndex = 2;
+            this.osName.Text = "Microsoft Windows 10 Home";
+            // 
             // motherboardInfo
             // 
             this.motherboardInfo.AutoSize = true;
-            this.motherboardInfo.Location = new System.Drawing.Point(9, 29);
+            this.motherboardInfo.Location = new System.Drawing.Point(11, 61);
             this.motherboardInfo.Name = "motherboardInfo";
             this.motherboardInfo.Size = new System.Drawing.Size(76, 13);
             this.motherboardInfo.TabIndex = 1;
@@ -222,11 +287,33 @@ namespace WindowsDiagnostic
             // cpuLabel
             // 
             this.cpuLabel.AutoSize = true;
-            this.cpuLabel.Location = new System.Drawing.Point(9, 7);
+            this.cpuLabel.Location = new System.Drawing.Point(11, 39);
             this.cpuLabel.Name = "cpuLabel";
             this.cpuLabel.Size = new System.Drawing.Size(38, 13);
             this.cpuLabel.TabIndex = 0;
             this.cpuLabel.Text = "CPU - ";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.errorsFlexBox);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(792, 343);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "System component errors";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // errorsFlexBox
+            // 
+            this.errorsFlexBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.errorsFlexBox.AutoScroll = true;
+            this.errorsFlexBox.Location = new System.Drawing.Point(9, 7);
+            this.errorsFlexBox.Name = "errorsFlexBox";
+            this.errorsFlexBox.Size = new System.Drawing.Size(775, 330);
+            this.errorsFlexBox.TabIndex = 0;
             // 
             // window
             // 
@@ -237,11 +324,13 @@ namespace WindowsDiagnostic
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.statusStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(816, 506);
             this.Name = "window";
             this.Text = "WinDiag";
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
@@ -251,6 +340,7 @@ namespace WindowsDiagnostic
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,6 +363,13 @@ namespace WindowsDiagnostic
         private System.Windows.Forms.Label cpuLabel;
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar;
         private System.Windows.Forms.Label motherboardInfo;
+        private System.Windows.Forms.Label osName;
+        private System.Windows.Forms.Label ramInfo;
+        private System.Windows.Forms.Label gpuInfo;
+        private System.Windows.Forms.CheckBox settingsDumpDb;
+        private System.Windows.Forms.CheckBox settingsCheckComponents;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.FlowLayoutPanel errorsFlexBox;
     }
 }
 
