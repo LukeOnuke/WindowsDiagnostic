@@ -80,7 +80,15 @@ namespace WindowsDiagnostic
                 + " " + Math.Round(float.Parse(getFieldFromManagment("select AdapterRam from  Win32_VideoController")) / 1073741824) + " GB";
             eventsListBox.Items.Add("Got PC specs");
 
+            //WIN32_ComputerSystem.PrimaryOwnerName
+            computerOwnerInfo.Text = "COMPUTER OWNER - " + getFieldFromManagment("select PrimaryOwnerName from WIN32_ComputerSystem");
+
             toolStripProgressBar.Value = 60;
+
+            {
+                
+                
+            }
 
             if (settingsDumpDb.Checked) {
                 toolStripStatusLabel.Text = "Fetching WIN32 database data...";

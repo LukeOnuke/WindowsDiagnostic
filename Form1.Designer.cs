@@ -52,6 +52,7 @@ namespace WindowsDiagnostic
             this.cpuLabel = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.errorsFlexBox = new System.Windows.Forms.FlowLayoutPanel();
+            this.computerOwnerInfo = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -233,6 +234,7 @@ namespace WindowsDiagnostic
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.computerOwnerInfo);
             this.tabPage3.Controls.Add(this.gpuInfo);
             this.tabPage3.Controls.Add(this.ramInfo);
             this.tabPage3.Controls.Add(this.osName);
@@ -315,6 +317,15 @@ namespace WindowsDiagnostic
             this.errorsFlexBox.Size = new System.Drawing.Size(775, 330);
             this.errorsFlexBox.TabIndex = 0;
             // 
+            // computerOwnerInfo
+            // 
+            this.computerOwnerInfo.AutoSize = true;
+            this.computerOwnerInfo.Location = new System.Drawing.Point(11, 128);
+            this.computerOwnerInfo.Name = "computerOwnerInfo";
+            this.computerOwnerInfo.Size = new System.Drawing.Size(83, 13);
+            this.computerOwnerInfo.TabIndex = 5;
+            this.computerOwnerInfo.Text = "ComputerOwner";
+            // 
             // window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -370,6 +381,7 @@ namespace WindowsDiagnostic
         private System.Windows.Forms.CheckBox settingsCheckComponents;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.FlowLayoutPanel errorsFlexBox;
+        private System.Windows.Forms.Label computerOwnerInfo;
     }
 }
 
